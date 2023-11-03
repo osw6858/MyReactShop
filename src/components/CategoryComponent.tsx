@@ -85,7 +85,7 @@ const CategoryTitle = styled.h2`
   color: ${({ theme }) => theme.text};
   font-size: 3.6rem;
   font-weight: 700;
-  margin: 4rem 0 0 0;
+  margin: 2rem 0 0 0;
 
   @media ${(props) => props.theme.laptop} {
     font-size: 3.3em;

@@ -26,7 +26,7 @@ const ProductComponent: React.FC = () => {
   return (
     <Container>
       {isLoading === "complete" ? (
-        <>
+        <Wrapper>
           <CategoryComponent
             title="패션"
             category={["men's clothing", "women's clothing"]}
@@ -34,7 +34,7 @@ const ProductComponent: React.FC = () => {
           />
           <CategoryComponent title="액세서리" category="jewelery" limit={4} />
           <CategoryComponent title="디지털" category="electronics" limit={4} />
-        </>
+        </Wrapper>
       ) : (
         <LoadingComponent />
       )}
@@ -49,9 +49,19 @@ const ProductComponent: React.FC = () => {
 const Container = styled.section`
   padding-top: 1rem;
   padding-bottom: 10rem;
-  min-width: 32rem;
   //opacity: 0;
   //transition: all 0.5s;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 0 0 0;
+
+  @media ${(props) => props.theme.mobile} {
+    align-items: stretch;
+  }
 `;
 
 export default ProductComponent;
