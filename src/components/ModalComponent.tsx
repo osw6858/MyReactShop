@@ -85,7 +85,7 @@ const ContentWrapper = styled.div`
   border: ${({ theme }) => theme.cardBorder};
   background-color: ${({ theme }) => theme.body};
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 100;
