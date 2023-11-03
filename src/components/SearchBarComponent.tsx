@@ -75,7 +75,7 @@ const StyledInput = styled.input`
   }
 
   @media ${(props) => props.theme.mobile} {
-    width: 94.5%;
+    width: 94.65%;
   }
 `;
 
