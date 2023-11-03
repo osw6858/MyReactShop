@@ -27,20 +27,22 @@ const CategoryComponent: React.FC<Category> = ({ title, category, limit }) => {
   const productArr: Product[] = filterCategory.slice(0, limit);
 
   return (
-    <Container>
+    <>
       <CategoryTitle>{title}</CategoryTitle>
-      <CardList>
-        {productArr.map((product: Product) => (
-          <CardComponent
-            key={product.id}
-            id={product.id}
-            imageSrc={product.image}
-            description={product.title}
-            price={product.price}
-          />
-        ))}
-      </CardList>
-    </Container>
+      <Container>
+        <CardList>
+          {productArr.map((product: Product) => (
+            <CardComponent
+              key={product.id}
+              id={product.id}
+              imageSrc={product.image}
+              description={product.title}
+              price={product.price}
+            />
+          ))}
+        </CardList>
+      </Container>
+    </>
   );
 };
 
@@ -55,6 +57,7 @@ const Container = styled.div`
 
   @media ${(props) => props.theme.mobile} {
     overflow-x: scroll;
+    overflow-y: clip;
     align-items: flex-start;
     margin: 5rem 1rem 5rem 1rem;
   }
@@ -82,7 +85,7 @@ const CategoryTitle = styled.h2`
   color: ${({ theme }) => theme.text};
   font-size: 3.6rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 4rem 0 0 0;
 
   @media ${(props) => props.theme.laptop} {
     font-size: 3.3em;
@@ -92,5 +95,9 @@ const CategoryTitle = styled.h2`
   }
   @media ${(props) => props.theme.mobile} {
     font-size: 2.3em;
+    position: relative;
+    top: 5rem;
+    left: 2rem;
+    max-width: 20rem;
   }
 `;

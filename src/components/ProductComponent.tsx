@@ -49,6 +49,7 @@ const ProductComponent: React.FC = () => {
 const Container = styled.section`
   padding-top: 1rem;
   padding-bottom: 10rem;
+  min-width: 32rem;
   //opacity: 0;
   //transition: all 0.5s;
 `;

@@ -27,7 +27,7 @@ const CarouselComponent = () => {
         <ImgContainer>
           <InnerText>
             <h2>신선한 식품!</h2>
-            <span>농장 직배송으로 더욱 신선한 식료품을 만나보세요.</span>
+            <span>농장 직배송으로 신선한 식료품을 만나보세요.</span>
             <ButtonComponent link="/food">바로가기</ButtonComponent>
           </InnerText>
           <img src={food} />
