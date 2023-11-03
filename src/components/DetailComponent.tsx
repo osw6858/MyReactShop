@@ -7,8 +7,10 @@ import { asyncSetProducts } from "../Redux/Thunk";
 import { Rate } from "antd";
 import ButtonComponent from "./ButtonComponent";
 import { addCart } from "../Redux/CartSlice";
+import { message } from "antd";
 
 const DetailComponent = () => {
+  const [messageApi, contextHolder] = message.useMessage();
   const { id } = useParams();
   const productList = useSelector((state: any) => state.product);
   const dispatch = useDispatch<any>();
@@ -63,6 +65,7 @@ const DetailComponent = () => {
 
   const addCartItem = (item: Product) => {
     dispatch(addCart(item.id));
+    messageApi.info("장바구니에 추가되었습니다.");
   };
 
   return (
@@ -85,6 +88,7 @@ const DetailComponent = () => {
               <Rating>{items.rating.rate}</Rating>
               <Rating>/ {items.rating.count}참여</Rating>
               <Price>{items.price}$</Price>
+              {contextHolder}
               <ButtonComponent
                 primary
                 link=""
