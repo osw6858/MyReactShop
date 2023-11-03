@@ -75,7 +75,8 @@ const StyledInput = styled.input`
   }
 
   @media ${(props) => props.theme.mobile} {
-    width: 94.65%;
+    min-width: 95.3%;
+    border-radius: 0;
   }
 `;
 
