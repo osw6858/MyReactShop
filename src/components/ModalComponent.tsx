@@ -90,7 +90,7 @@ const ContentWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   opacity: 100;
   border-radius: 1rem;
 `;
