@@ -69,7 +69,7 @@ const Container = styled.div`
   height: 100%; //calc(100vh + (32.8rem));
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 200;
