@@ -6,10 +6,12 @@ import { removeCart } from "../Redux/CartSlice";
 
 interface Props {
   closeModal: () => void;
+  count: number;
 }
 
-const ModalComoponent = ({ closeModal }: Props) => {
+const ModalComoponent = ({ closeModal, count }: Props) => {
   const dispatch = useDispatch<any>();
+  //console.log(count);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -39,6 +41,22 @@ const ModalComoponent = ({ closeModal }: Props) => {
           </ButtonComponent>
         </ButtonWrapper>
       </ContentWrapper>
+      {count <= 0 && (
+        <ContentWrapper>
+          <TextWrapper>
+            <h2>장바구니에 상품이 없습니다.</h2>
+            <p>쇼핑하러 갈까요?</p>
+          </TextWrapper>
+          <ButtonWrapper>
+            <ButtonComponent primary link="/">
+              네
+            </ButtonComponent>
+            <ButtonComponent link="" clickFuc={closeModal}>
+              아니오
+            </ButtonComponent>
+          </ButtonWrapper>
+        </ContentWrapper>
+      )}
     </Container>
   );
 };

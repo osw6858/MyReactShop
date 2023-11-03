@@ -116,7 +116,9 @@ const CartComponent: React.FC = () => {
           </TotalPrice>
         </CatListWrapper>
       </ItemWrapper>
-      {modal && <ModalComoponent closeModal={closeModal} />}
+      {modal && (
+        <ModalComoponent closeModal={closeModal} count={cartItems.length} />
+      )}
     </Container>
   );
 };
