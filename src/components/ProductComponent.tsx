@@ -61,6 +61,7 @@ const Wrapper = styled.div`
 
   @media ${(props) => props.theme.mobile} {
     align-items: stretch;
+    margin-top: 0rem;
   }
 `;
 

@@ -99,5 +99,6 @@ const CategoryTitle = styled.h2`
     top: 5rem;
     left: 2rem;
     max-width: 20rem;
+    margin-top: 0rem;
   }
 `;
