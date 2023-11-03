@@ -36,16 +36,22 @@ const Container = styled.section`
   min-width: 36rem;
   padding: 1rem 0 4rem 0;
 
-  & > div {
+  & > div > div {
     @media ${(props) => props.theme.mobile} {
       overflow-x: auto;
       align-items: center;
-      margin: 5rem 1rem 5rem 1rem;
+      margin-top: 2rem;
     }
     & > div {
       @media ${(props) => props.theme.mobile} {
         grid-template-columns: repeat(1, 1fr);
+        margin: 0;
       }
     }
+  }
+
+  & > div > h2 {
+    margin: 0 auto;
+    text-align: center;
   }
 `;

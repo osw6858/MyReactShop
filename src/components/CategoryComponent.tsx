@@ -29,17 +29,19 @@ const CategoryComponent: React.FC<Category> = ({ title, category, limit }) => {
   return (
     <Container>
       <CategoryTitle>{title}</CategoryTitle>
-      <CardList>
-        {productArr.map((product: Product) => (
-          <CardComponent
-            key={product.id}
-            id={product.id}
-            imageSrc={product.image}
-            description={product.title}
-            price={product.price}
-          />
-        ))}
-      </CardList>
+      <Wrapper>
+        <CardList>
+          {productArr.map((product: Product) => (
+            <CardComponent
+              key={product.id}
+              id={product.id}
+              imageSrc={product.image}
+              description={product.title}
+              price={product.price}
+            />
+          ))}
+        </CardList>
+      </Wrapper>
     </Container>
   );
 };
@@ -47,17 +49,18 @@ const CategoryComponent: React.FC<Category> = ({ title, category, limit }) => {
 export default CategoryComponent;
 
 const Container = styled.div`
+  margin-top: 5rem;
+`;
+
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin: 5rem 0;
 
   @media ${(props) => props.theme.mobile} {
     overflow-x: scroll;
     overflow-y: clip;
     align-items: flex-start;
-    margin: 5rem 1rem 5rem 1rem;
   }
 `;
 
@@ -76,6 +79,7 @@ const CardList = styled.div`
 
   @media ${(props) => props.theme.mobile} {
     grid-template-columns: repeat(10, 1fr);
+    margin-left: 1rem;
   }
 `;
 
@@ -83,7 +87,9 @@ const CategoryTitle = styled.h2`
   color: ${({ theme }) => theme.text};
   font-size: 3.6rem;
   font-weight: 700;
-  margin: 1rem 0;
+  width: 15rem;
+  margin: 0 auto;
+  text-align: center;
 
   @media ${(props) => props.theme.laptop} {
     font-size: 3.3em;
@@ -93,5 +99,8 @@ const CategoryTitle = styled.h2`
   }
   @media ${(props) => props.theme.mobile} {
     font-size: 2.3em;
+    width: 10rem;
+    margin-left: 2.5rem;
+    text-align: left;
   }
 `;
