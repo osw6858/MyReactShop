@@ -154,7 +154,7 @@ const StyledHeader = styled.header`
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0.4rem;
 `;
 
