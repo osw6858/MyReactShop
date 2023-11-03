@@ -68,7 +68,10 @@ const Container = styled.div`
   min-width: 36rem;
   height: calc(100vh + (32.8rem));
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 200;
   top: 0;
 `;
