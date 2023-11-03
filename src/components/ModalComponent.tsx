@@ -90,7 +90,7 @@ const ContentWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -80%);
   opacity: 100;
   border-radius: 1rem;
 `;
@@ -99,6 +99,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  & > button {
+    width: 8rem;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -106,6 +109,7 @@ const TextWrapper = styled.div`
 
   & > h2 {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   & > p {
     font-size: 1.4rem;

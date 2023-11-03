@@ -156,6 +156,14 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-around;
   padding: 0.4rem;
+
+  @media ${(props) => props.theme.tablet} {
+    justify-content: space-between;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    justify-content: space-between;
+  }
 `;
 
 const StyledSvg = styled.svg`
@@ -185,12 +193,14 @@ const LeftItmes = styled.div`
   }
 
   @media ${(props) => props.theme.tablet} {
+    margin-left: 0.3rem;
     svg {
       display: block;
     }
   }
 
   @media ${(props) => props.theme.mobile} {
+    margin-left: 0.3rem;
     svg {
       display: block;
     }
@@ -200,6 +210,14 @@ const LeftItmes = styled.div`
 const RightItem = styled.div`
   display: flex;
   align-items: center;
+
+  @media ${(props) => props.theme.tablet} {
+    margin-right: 0.3rem;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    margin-right: 0.3rem;
+  }
 `;
 
 const Itme = styled.span`

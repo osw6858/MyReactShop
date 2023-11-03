@@ -238,6 +238,10 @@ const TotalPrice = styled.div`
   align-items: center;
   font-size: 3rem;
 
+  & > button {
+    width: 10.3rem;
+  }
+
   @media ${(props) => props.theme.laptop} {
     justify-content: left;
     margin: 3rem 0 0 2rem;

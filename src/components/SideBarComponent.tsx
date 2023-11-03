@@ -21,7 +21,6 @@ const SideBarComponent = ({ handleSidbar, isOpen }: Props) => {
         style={{ transform: `translateX(${isOpen ? "0" : "-100%"})` }}
         onClick={(event) => event.stopPropagation()}
       >
-        <CloseButton onClick={handleSidbar}>X</CloseButton>
         <ul>
           <StyledLink to="/fashion">
             <li onClick={handleSidbar}>패션</li>
@@ -77,17 +76,6 @@ const SideMenuWrapper = styled.div`
       margin: 2rem 0 2rem 2rem;
     }
   }
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  color: background-color: ${({ theme }) => theme.text};
-  font-size: 2rem;
-  cursor: pointer;
 `;
 
 const StyledLink = styled(Link)`
