@@ -1,0 +1,30 @@
+/* .a {
+    justify-content: spa;
+    align-items: ;'
+    border-bottom: 1px ;
+    position: relative;
+
+
+}
+
+.b{
+ position: absolute;
+ flex-direction: column;
+ justify-content:left
+ align-items: flex-start;
+ margin-bottom: ;
+ border-radius: ;
+ cursor: pointer;
+ flex-wrap: nowrap
+;
+border: 1px 
+} 
+
+.c {
+    border: 1px solid gray;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: ;
+    z-index: ;
+    flex-grow: 1;
+} */
