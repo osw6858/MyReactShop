@@ -66,7 +66,7 @@ export default ModalComoponent;
 const Container = styled.div`
   width: 100%;
   min-width: 36rem;
-  height: calc(100vh + (32.8rem));
+  height: 100%; //calc(100vh + (32.8rem));
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 200;
