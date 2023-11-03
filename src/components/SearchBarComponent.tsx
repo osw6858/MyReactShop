@@ -68,6 +68,11 @@ const StyledInput = styled.input`
   border-radius: 0.5rem;
   color: #c3c7d6;
   padding: 0 1rem 0 1rem;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
 
   @media ${(props) => props.theme.mobile} {
     min-width: 31rem;

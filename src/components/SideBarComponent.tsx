@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   handleSidbar: () => void;
@@ -22,9 +23,15 @@ const SideBarComponent = ({ handleSidbar, isOpen }: Props) => {
       >
         <CloseButton onClick={handleSidbar}>X</CloseButton>
         <ul>
-          <li>메뉴 항목 1</li>
-          <li>메뉴 항목 2</li>
-          <li>메뉴 항목 3</li>
+          <StyledLink to="/fashion">
+            <li onClick={handleSidbar}>패션</li>
+          </StyledLink>
+          <StyledLink to="/accessory">
+            <li onClick={handleSidbar}>액세서리</li>
+          </StyledLink>
+          <StyledLink to="/digital">
+            <li onClick={handleSidbar}>디지털</li>
+          </StyledLink>
         </ul>
       </SideMenuWrapper>
     </Container>
@@ -61,9 +68,15 @@ const SideMenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.body};
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   animation: ${SlideIn} 0.5s ease-in-out;
+
+  & > ul {
+    margin: 2.2rem;
+    & > a {
+      font-size: 1.6rem;
+      margin: 2rem 0 2rem 2rem;
+    }
+  }
 `;
 
 const CloseButton = styled.button`
@@ -75,4 +88,9 @@ const CloseButton = styled.button`
   color: background-color: ${({ theme }) => theme.text};
   font-size: 2rem;
   cursor: pointer;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;

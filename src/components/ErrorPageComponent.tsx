@@ -36,6 +36,10 @@ const Container = styled.section`
     font-size: 5rem;
     font-weight: 400;
     margin-bottom: 3rem;
+
+    @media ${(props) => props.theme.mobile} {
+      font-size: 3rem;
+    }
   }
 `;
 
