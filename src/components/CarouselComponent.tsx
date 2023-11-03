@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import { css } from "styled-components";
 import ButtonComponent from "./ButtonComponent";
+import fashion from "../assets/fashion.jpeg";
+import food from "../assets/grocery.jpeg";
+import digital from "../assets/digital.jpeg";
 
 const CarouselComponent = () => {
   return (
@@ -19,7 +22,7 @@ const CarouselComponent = () => {
             <span>이제 막 도착한 패션 청바지를 구경해 보세요.</span>
             <ButtonComponent link="/fashion">바로가기</ButtonComponent>
           </InnerText>
-          <img src="src/assets/fashion.jpeg" />
+          <img src={fashion} />
         </ImgContainer>
         <ImgContainer>
           <InnerText>
@@ -27,7 +30,7 @@ const CarouselComponent = () => {
             <span>농장 직배송으로 더욱 신선한 식료품을 만나보세요.</span>
             <ButtonComponent link="/food">바로가기</ButtonComponent>
           </InnerText>
-          <img src="src/assets/grocery.jpeg" />
+          <img src={food} />
         </ImgContainer>
         <ImgContainer>
           <InnerText>
@@ -35,7 +38,7 @@ const CarouselComponent = () => {
             <span>다양한 디지털 상품을 둘러보세요.</span>
             <ButtonComponent link="/digital">바로가기</ButtonComponent>
           </InnerText>
-          <img src="src/assets/digital.jpeg" />
+          <img src={digital} />
         </ImgContainer>
       </Carousel>
     </Container>
